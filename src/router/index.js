@@ -1,16 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
+import PanicButton from "../pages/PanicButton.vue";
 
-import ScheduleCamouflage from "../pages/ScheduleCamouflage.vue";
-import CalculatorCamouflage from "../pages/CalculatorCamouflage.vue";
-import Settings from "../pages/Settings.vue";
-
-const routes = [
-  { path: "/", name: "schedule", component: ScheduleCamouflage },
-  { path: "/calc", name: "calc", component: CalculatorCamouflage },
-  { path: "/settings", name: "settings", component: Settings },
-];
-
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: [
+    {
+      path: "/",
+      name: "panic",
+      component: PanicButton,
+    },
+  ],
 });
+
+export default router;
